@@ -111,6 +111,7 @@ class ExampleController extends Controller
 
         $this->validate($request, [
             'qu_name' => 'required',
+            'radioExample' => 'required',
             'option_type' => 'required'
         ]);
 

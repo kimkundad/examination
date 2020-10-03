@@ -204,7 +204,7 @@ $(document).ready(function(){
    
     $('.next_gen').click(function() {
         $("#player").each(function(){
-            $(this).get(0).pause();
+            $(this).get().pause();
         });
     });
 
