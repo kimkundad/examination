@@ -205,7 +205,7 @@ $(document).ready(function(){
     $('.next_gen').click(function() {
         var get_sound = 0;
         $("#player").each(function(){
-            $(this).get(get_sound).pause();
+            parseInt($(this).get(get_sound).pause());
             console.log(get_sound);
             get_sound++;
         });
