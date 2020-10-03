@@ -201,12 +201,12 @@ var result = new Array();
 $(document).ready(function(){
 
     var myAudio = document.getElementsByClassName("myAudio");
-   
+    var audios = document.getElementById('player');
+        console.log(audios.length);
     $('.next_gen').click(function() {
-        var set_sound = 1;
+        
         $("#player").each(function(){
-            
-            $(this).get(1).pause();
+            $(this).get(0).pause();
         });
     });
 
