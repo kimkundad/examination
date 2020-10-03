@@ -203,8 +203,10 @@ $(document).ready(function(){
     var myAudio = document.getElementsByClassName("myAudio");
    
     $('.next_gen').click(function() {
+        var get_sound = 0;
         $("#player").each(function(){
-            $(this).get().pause();
+            $(this).get(get_sound).pause();
+            get_sound++;
         });
     });
 
