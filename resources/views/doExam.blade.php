@@ -209,7 +209,7 @@ $(document).ready(function(){
             @if(isset($obj))
                 @foreach($obj as $u)
                 @if($u->qu_type == 3)
-                $(this).get(set_sound).pause();
+                $(this).get(Number(set_sound)).pause();
                 set_sound++;
                 @endif
                 @endforeach
