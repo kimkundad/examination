@@ -201,8 +201,8 @@ var result = new Array();
 $(document).ready(function(){
 
     var myAudio = document.getElementsByClassName("myAudio");
-    var audios = document.getElementById('player');
-        console.log(audios.length);
+    var sounds = document.getElementsByTagName('audio');
+        console.log(sounds.length);
     $('.next_gen').click(function() {
         
         $("#player").each(function(){
