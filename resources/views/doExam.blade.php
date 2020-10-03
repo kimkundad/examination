@@ -206,7 +206,7 @@ $(document).ready(function(){
         var set_sound = 1;
         $("#player").each(function(){
             
-            $(this).get(Number(set_sound)).pause();
+            $(this).get(1).pause();
         });
     });
 
