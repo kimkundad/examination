@@ -203,17 +203,10 @@ $(document).ready(function(){
     var myAudio = document.getElementsByClassName("myAudio");
    
     $('.next_gen').click(function() {
-        var set_sound = 0;
+        var set_sound = 1;
         $("#player").each(function(){
             
-            @if(isset($obj))
-                @foreach($obj as $u)
-                @if($u->qu_type == 3)
-                $(this).get(Number(set_sound)).pause();
-                set_sound++;
-                @endif
-                @endforeach
-            @endif
+            $(this).get(Number(set_sound)).pause();
         });
     });
 
