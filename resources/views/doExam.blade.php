@@ -183,7 +183,7 @@ var result = new Array();
       }
   });
 
-  
+  console.log(result.length);
   final_set1 = result.length;
 
   if(result.length == {{$set_zero}}){
@@ -203,11 +203,17 @@ $(document).ready(function(){
     var myAudio = document.getElementsByClassName("myAudio");
    
     $('.next_gen').click(function() {
-        var get_sound = 0;
+        var set_sound = 0;
         $("#player").each(function(){
-            parseInt($(this).get(get_sound).pause());
-            console.log(get_sound);
-            get_sound++;
+            
+            @if(isset($obj))
+                @foreach($obj as $u)
+                @if($u->qu_type == 3)
+                $(this).get(set_sound).pause();
+                set_sound++;
+                @endif
+                @endforeach
+            @endif
         });
     });
 
