@@ -96,7 +96,7 @@ figure {
                                 @elseif($u->qu_type == 2)
                                 <h3>{{$s}}</h3>
                                     <section {{$sum = 0}}>
-                                    @if(isset($uu->qu_file))
+                                    @if(isset($u->qu_file))
                                     <img src="{{ url('img/exercise/'.$u->qu_file) }}" style="width:100%;">
                                     @endif
                                     <br><br>
