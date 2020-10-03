@@ -149,7 +149,7 @@ jlpt.online แหล่งรวมข้อสอบ แนวข้อสอ�
                 <div class="row justify-content-center">
                     <div class="col-xl-7">
                         <div class="section-title">
-                            <h2>So, What brings new product today?</h2>
+                            <h2>วันนี้ ครูพี่โฮมมีแบบทดสอบใหม่อะไรบ้าง?</h2>
                         </div>
                     </div>
                 </div>
@@ -157,22 +157,18 @@ jlpt.online แหล่งรวมข้อสอบ แนวข้อสอ�
                     <div class="col-xl-6 col-lg-6 col-md-6">
                         <div class="new-product-content">
                             <img class="img-fluid" src="./images/svg/api.svg" alt="">
-                            <h4>Integrate our API</h4>
-                            <p>A white-label solution for your project, whether it is a wallet, a marketplace or a
-                                service provider. Set it up to accept any of 140+ cryptocurrencies listed on Tradix
-                                and get revenue for each transaction made.</p>
-                            <a href="#" class="btn btn-success px-4">Learn more</a>
+                            <h4>แบบฝึกหัดใหม่ทุกวัน</h4>
+                            <p>เพื่อความทันสมัยของเนื้อหา แบบทดสอบ  เราได้ทำการ คัดกรอง ค้นหาแนวแบบทดสอบ เพิ่มเนื้อหา แบบทดสอบภาษาญี่ปุ่นออนไลน์ ให้กับนักเรียน ให้เยอะที่สุด </p>
+                            <a href="{{ url('about_us') }}" class="btn btn-success px-4">รู้จักเรามากขึ้น</a>
                         </div>
                     </div>
                     <div class="col-xl-6 col-lg-6 col-md-6">
                         <div class="new-product-content">
                             <img class="img-fluid" src="./images/svg/affiliate.svg" alt="">
-                            <h4>Join our Affiliate Program</h4>
-                            <p>Place an affiliate link or customizable widget on your website, blog or social media
-                                profile. Get 50% of our revenue from every transaction made via either of the tools
-                                used.
+                            <h4>เก็บประวัติการทำแบบฝึกหัด</h4>
+                            <p>เพื่อให้นักเรียน ได้วิเคราะห์ สรุปผลการเรียนรู้ได้เอง  จากผลการทำแบบฝึกหัด ในแต่ละรอบ อีกทั้งยังสามารถแชร์ ผลการทดสอบ ให้เพื่อนๆมาร่วมสนุกกันได้
                             </p>
-                            <a href="#" class="btn btn-outline-success px-4">Become an affiliate</a>
+                            <a href="{{ url('examination') }}" class="btn btn-outline-success px-4">เริ่มทำแบบทดสอบกัน</a>
                         </div>
                     </div>
                 </div>
