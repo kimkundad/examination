@@ -183,7 +183,7 @@ var result = new Array();
       }
   });
 
-  console.log(result.length);
+  
   final_set1 = result.length;
 
   if(result.length == {{$set_zero}}){
@@ -206,6 +206,7 @@ $(document).ready(function(){
         var get_sound = 0;
         $("#player").each(function(){
             $(this).get(get_sound).pause();
+            console.log(get_sound);
             get_sound++;
         });
     });
