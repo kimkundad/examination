@@ -54,6 +54,45 @@ class HomeController extends Controller
         return view('welcome', $data);
     }
 
+    public function terms(){
+        return view('terms');
+    }
+
+    public function privacy_policy(){
+        return view('privacy_policy');
+    }
+
+    public function examinations(){
+
+        $objs = category::get();
+        
+        if(isset($objs)){
+            foreach($objs as $j) {
+                $ex = DB::table('exercises')
+                ->where('cat_id', $j->id)
+                ->orderBy('ex_view', 'desc')
+                ->limit(8)
+                ->get();
+
+                foreach ($ex as $u) {
+                    $options = DB::table('questions')->where('part_id',$u->id)->count();
+                    $u->option = $options;
+                }
+
+                $j->my_ex = $ex;
+            }
+        }
+        
+        $data['objs'] = $objs;
+
+        
+
+        
+
+        return view('examination', $data);
+
+    }
+
     public function search_category(Request $request){
 
         $category = $request['category'];
@@ -111,7 +150,26 @@ class HomeController extends Controller
 
     public function start_exam($id){
 
-        
+        if(Auth::guest()){
+            $user = null;
+        }else{
+
+        $user = DB::table('answerhs')
+        ->select(
+        'answerhs.*',
+        'answerhs.id as ids',
+        'answerhs.created_at as created_ats',
+        'exercises.*'
+        )
+        ->leftjoin('exercises', 'exercises.id',  'answerhs.examples_id')
+        ->where('answerhs.user_id', Auth::user()->id)
+        ->get();
+
+        }
+
+        //dd($user);
+
+        $data['user'] = $user;
 
         $ex = DB::table('exercises')
         ->select(

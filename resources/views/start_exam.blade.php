@@ -55,62 +55,8 @@
                         </div>
                     </div>
                 </div>
-              <!--  <div class="row">
-                    <div class="col-xl-12">
-                        <div class="market-table">
-                            <div class="table-responsive">
-                                <table class="table mb-0 table-responsive-sm table-striped">
-                                    <thead>
-                                        <tr>
-                                            <th>#</th>
-                                            <th>การทดสอบ</th>
-                                            <th>วันที่ทำแบบทดสอบ</th>
-                                            <th>ผลการทดสอบ</th>
-                                            <th>เวลาที่ใช้</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>
-                                                คะแนน 15/20 
-                                            </td>
-
-                                            <td>
-                                                22 กันยายน 2563
-                                            </td>
-                                            <td>
-                                                <span class="text-success">ผ่าน</span>
-                                            </td>
-                                            
-                                            <td>20.25 นาที </td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>
-                                                คะแนน 15/20 
-                                            </td>
-
-                                            <td>
-                                                22 กันยายน 2563
-                                            </td>
-                                            <td>
-                                                <span class="text-success">ผ่าน</span>
-                                            </td>
-                                            
-                                            <td>20.25 นาที </td>
-                                        </tr>
-                                      
-                                        
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-
                 <hr>
-
+                @if (Auth::guest())
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="market-table">
@@ -139,6 +85,65 @@
                         </div>
                     </div>
                 </div>
+                @else
+
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="market-table">
+                            <div class="table-responsive">
+                                <table class="table mb-0 table-responsive-sm table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>การทดสอบ</th>
+                                            <th>วันที่ทำแบบทดสอบ</th>
+                                            <th>ผลการทดสอบ</th>
+                                            <th>เวลาที่ใช้</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody {{ $s = 1 }}>
+
+                                    @if(isset($user))
+                                        @foreach($user as $u)
+                                        <tr>
+                                            <td>{{ $s }}</td>
+                                            <td>
+                                                คะแนน {{ $u->total_point }}/{{ $u->ex_total }} 
+                                            </td>
+
+                                            <td>
+                                                {{$u->created_at}}
+                                            </td>
+                                            <td>
+                                                @if($u->total_point >= ($u->ex_total/2))
+                                                <span class="text-success">ผ่าน</span>
+                                                @else
+                                                <span class="text-danger">ไม่ผ่าน</span>
+                                                @endif
+                                                
+                                            </td>
+                                            
+                                            <td>{{ $u->total_time }} นาที </td>
+                                        </tr {{ $s++ }}>
+                                        @endforeach
+                                    @endif
+                                        
+                                      
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                @endif
+              <!--   -->
+
+                
+
+                
 
 
             </div>

@@ -18,7 +18,7 @@
 
     <script src="{{ url('assets/js/global.js') }}"></script>
 
-
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 
     <!-- Chart sparkline plugin files -->
@@ -32,3 +32,12 @@
     <script src="{{ url('assets/js/plugins/owl-carousel-init.js') }}"></script>
 
     <script src="{{ url('assets/js/scripts.js') }}"></script>
+
+    <script>
+
+        @if ($message = Session::get('edit_success'))
+        swal("Success!", "ระบบทำการแก้ไขข้อมูลให้แล้ว.", "success");
+        @endif
+
+    </script>
+    

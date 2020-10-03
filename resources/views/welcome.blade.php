@@ -1,7 +1,7 @@
 @extends('layouts.template')
 
 @section('title')
-เสริมสร้างพัฒนาการของเด็กๆผ่านการทำอาหารไปกับพวกเรา Green Wondery
+jlpt.online แหล่งรวมข้อสอบ แนวข้อสอบวัดระดับ JLPT ติว N4 N5 ติว N3 N2 N1 ติว PAT 7.3 ภาษาญี่ปุ่น ภาษาญี่ปุ่นพื้นฐาน
 @stop
 
 @section('stylesheet')
@@ -184,8 +184,8 @@
                 <div class="row justify-content-center">
                     <div class="col-xl-7">
                         <div class="section_heading">
-                            <span>What's Say</span>
-                            <h3>Trusted by 2 million customers</h3>
+                            <span>มีอะไรพูด ?</span>
+                            <h3>ได้รับความไว้วางใจจากผู้ใช้งาน</h3>
                         </div>
                     </div>
                 </div>
@@ -196,18 +196,16 @@
                                 <div class="row align-items-center">
                                     <div class="col-xl-6 col-md-6">
                                         <div class="customer-img">
-                                            <img class="img-fluid" src="./images/testimonial/1.jpg" alt="">
+                                            <img class="img-fluid" src="{{ url('img/1601717289304.jpg') }}" alt="">
                                         </div>
                                     </div>
                                     <div class="col-xl-6 col-md-6">
                                         <div class="customer-review">
-                                            <img class="img-fluid" src="./images/brand/2.webp" alt="">
-                                            <p>Integrating Tradix services into Trezor Wallet's exchange has been a
-                                                great success for all parties, especially the users.
+                                            <img class="img-fluid" src="" alt="">
+                                            <p>เคยเรียนค่ะ โดยรวมถือว่าโอเคเลยนะ เรียนแบบสด หรือ @home ก็พอๆกัน เสียอย่างเดียวเวลาไม่เข้าใจอะไร @homeจะถามครูตัวต่อตัวไม่ได้ แต่ถามทางไลน์หรือเฟสได้ค่ะ 
                                             </p>
                                             <div class="customer-info">
-                                                <h5>Mr John Doe</h5>
-                                                <p>CEO, Example Company</p>
+                                                <h5>สมาชิกหมายเลข 1101456</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -215,17 +213,15 @@
                                 <div class="row align-items-center">
                                     <div class="col-xl-6 col-md-6">
                                         <div class="customer-img">
-                                            <img class="img-fluid" src="./images/testimonial/2.jpg" alt="">
+                                            <img class="img-fluid" src="{{ url('img/1601717270937.jpg') }}" alt="">
                                         </div>
                                     </div>
                                     <div class="col-xl-6 col-md-6">
                                         <div class="customer-review">
-                                            <img class="img-fluid" src="./images/brand/3.webp" alt="">
-                                            <p>MEW is excited to bring Tradix’s extensive range of crypto assets,
-                                                competitive rates and seamless swap functionality</p>
+                                            <img class="img-fluid" src="" alt="">
+                                            <p>เนื้อหาแบบทดสอบครบ หลากหลาย เพื่อนๆสามารถลองมาทำแบบทดสอบ เพื่อวัดผลกันได้นะครับ มาสนุกด้วยกัน</p>
                                             <div class="customer-info">
-                                                <h5>Mr Abraham</h5>
-                                                <p>CEO, Example Company</p>
+                                            <h5>สมาชิกหมายเลข 1154626</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -243,25 +239,23 @@
                     <div class="col-xl-4 col-lg-4 col-md-4">
                         <div class="trust-content">
                             <span><i class="fa fa-shield"></i></span>
-                            <h4>EASY</h4>
-                            <p>Create an account, choose your crypto, input your receiving address, and send your funds
+                            <h4>ใช้งานง่าย</h4>
+                            <p>สร้างบัญชี เข้าไปทำ แบบทดสอบ ภาษาญี่ปุ่นออนไลน์ พร้อมเฉลย เก็บสถิติการทำแบบทดสอบ
                             </p>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-4">
                         <div class="trust-content">
                             <span><i class="fa fa-cubes"></i></span>
-                            <h4>SAFE</h4>
-                            <p>As a non-custodial exchange, we don’t hold your deposits, so your funds are never
-                                vulnerable to hacks.</p>
+                            <h4>หลากหลาย</h4>
+                            <p>ติวสอบวัดระดับ JLPT ติว N4 N5 ติว N3 N2 N1 ติว PAT 7.3 ภาษาญี่ปุ่น ภาษาญี่ปุ่นพื้นฐาน สำหรับคนทำงาน</p>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-4">
                         <div class="trust-content">
                             <span><i class="fa fa-life-ring"></i></span>
-                            <h4>COMPETITIVE</h4>
-                            <p>Our exchange rates are updated in real time. What you see is what you get--with no
-                                additional fees.</p>
+                            <h4>ใช้ได้จริง</h4>
+                            <p> วิเคราะห์ผลคะแนนออกมาเป็นกราฟ รู้จุดอ่อนจุดแข็งและประเมินโอกาสสอบผ่าน คอร์สเรียนภาษาญี่ปุ่นออนไลน์ </p>
                         </div>
                     </div>
                 </div>

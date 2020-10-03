@@ -12,9 +12,9 @@
                 <div class="bottom-widget">
                     <h4 class="widget-title">&nbsp</h4>
                     <ul>
-                        <li><a href="#">เกี่ยวกับเรา</a></li>
-                        <li><a href="#">คลังข้อสอบ</a></li>
-                        <li><a href="#">เรียนภาษาญี่ปุ่นออนไลน์</a></li>
+                        <li><a href="{{ url('about_us') }}">เกี่ยวกับเรา</a></li>
+                        <li><a href="{{ url('examination') }}">คลังข้อสอบ</a></li>
+                        <li><a href="https://learnsbuy.com/">เรียนภาษาญี่ปุ่นออนไลน์</a></li>
                     </ul>
                 </div>
             </div>
@@ -22,9 +22,9 @@
                 <div class="bottom-widget">
                     <h4 class="widget-title">&nbsp</h4>
                     <ul>
-                        <li><a href="#">ติดต่อเรา</a></li>
-                        <li><a href="#">ตอบ - ถาม</a></li>
-                        <li><a href="#">บทความ</a></li>
+                        <li><a href="{{ url('contact_us') }}">ติดต่อเรา</a></li>
+                        <li><a href="{{ url('faq') }}">ตอบ - ถาม</a></li>
+                        <li><a href="https://learnsbuy.com/news">บทความ</a></li>
                     </ul>
                 </div>
             </div>
@@ -35,13 +35,13 @@
                         <div class="col-xl-6">
                             <ul>
                                 
-                                <li><a href="#">Terms of Service</a></li>
+                                <li><a href="{{ url('terms') }}">Terms of Service</a></li>
                                 
                             </ul>
                         </div>
                         <div class="col-xl-6">
                             <ul>
-                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="{{ url('privacy_policy') }}">Privacy Policy</a></li>
                             </ul>
                         </div>
                     </div>
@@ -56,7 +56,7 @@
                 <div class="row">
                     <div class="col-xl-6">
                         <div class="copyright">
-                            <p>© Copyright 2019 <a href="#">Tradix</a> I All Rights Reserved</p>
+                            <p>© Copyright 2020 <a href="#">JLPT.ONLINE</a> I All Rights Reserved</p>
                         </div>
                     </div>
                     <div class="col-xl-6">

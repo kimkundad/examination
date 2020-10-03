@@ -259,7 +259,7 @@ class ExampleController extends Controller
 
         }
 
-        return redirect(url('admin/edit_example/'.$id.'/edit'))->with('edit_success','เพิ่ม เสร็จเรียบร้อยแล้ว');
+        return redirect(url('accounts'))->with('edit_success','เพิ่ม เสร็จเรียบร้อยแล้ว');
 
 
     }

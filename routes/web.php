@@ -17,7 +17,7 @@ Auth::routes();
 Route::auth();
 
 Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
-
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Route::get('/home', 'HomeController@index')->name('index');
 Route::get('/', 'HomeController@index')->name('index');
 
@@ -38,8 +38,18 @@ Route::get('/contact_us', 'HomeController@contact')->name('contact');
 
 Route::post('/post_ans_course','HomeController@post_ans_course2');
 
+Route::get('/examination', 'HomeController@examinations')->name('examinations');
+
+Route::get('/terms', 'HomeController@terms')->name('terms');
+Route::get('/privacy_policy', 'HomeController@privacy_policy')->name('privacy_policy');
+
+
 Route::group(['middleware' => ['UserRole:manager|employee|customer']], function() {
-  
+
+  Route::get('/history', 'ProfileController@history')->name('history');
+  Route::get('/accounts', 'ProfileController@accounts')->name('accounts');
+  Route::post('api/add_profile','ProfileController@add_profile');
+
   });
 
 Route::group(['middleware' => ['UserRole:manager|employee']], function() {
