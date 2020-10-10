@@ -14,71 +14,57 @@
 
 
 <div class="about-one section-padding">
-            <div class="container">
-                <div class="row align-items-center">
+        <div class="container">
+            <div class="row align-items-center">
                     <div class="col-lg-6">
                         <div class="service-img">
-                            <img src="{{ url('assets/images/about/1.jpg')}}" alt="" class="img-fluid">
+                            <img src="{{ url('img/students-using-digital-devices.jpg')}}" alt="" class="img-fluid">
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="service-content m-t-50">
-                            <h3>In Brief</h3>
-                            <p>Founded in January of 2020, Tradix is a digital currency wallet and platform where
-                                merchants
-                                and consumers can transact with new digital currencies like bitcoin, ethereum, and
-                                litecoin.
-                                We're based in San Francisco, California.</p>
-                            <p>Bitcoin is the world's most widely used alternative currency with a total market cap of
-                                over
-                                $100 billion. The bitcoin network is made up of thousands of computers run by
-                                individuals
-                                all over the world.</p>
+                            <h3>ทำแบบฝึกหัดภาษาญี่ปุ่นฟรี</h3>
+                            <p>ไม่ว่าคุณจะอยู่ที่ไหน ก็สามารถเข้าระบบ เพื่อมาร่วมสนุกไปกับการทำแบบฝึกหัด ภาษาญี่ปุ่นออนไลน์ได้ตลอด 24 ชั่วโมงทั่วโลก </p>
+                            <p>นักเรียน นักศึกษา สามารถใช้งานได้ ไม่ว่าจะเป็นบนเครื่องคอมพิวเตอร์ โน๊ตบุ๊ก มือถือ ทุกระบบปฏิบัติการ PC (Windows, Mac OS) มือถือ (iOS, Android)</p>
 
                         </div>
                     </div>
-                </div>
             </div>
         </div>
-        <div class="our-ceo py-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="ceo-content">
-                            <div class="media">
-                                <img src="{{ url('assets/images/avatar/6.jpg')}}" alt="" class="img-fluid mr-4 rounded-circle">
-                                <div class="media-body">
-                                    <h3>Eric Benz</h3>
-                                    <span>CEO of Tradix</span>
-                                    <p class="mt-2">John Abraham has over 10 years of experience working in and around
-                                        Financial Technology. He has delivered innovative SaaS systems for some of
-                                        today's biggest institutions around payments, identity, and banking
-                                        infrastructure. John Abraham has been in the Blockchain space since 2012 and is
-                                        involved in a number of blockchain and fintech businesses both as an investor,
-                                        board director, and founder.</p>
-                                </div>
-                            </div>
+    </div>
+    <div class="about-one section-padding">
+        <div class="container">
+            <div class="row align-items-center">
+                    
+                    <div class="col-lg-6">
+                        <div class="service-content m-t-50">
+                            <h3>เก็บสถิติ การทำแบบฝึกหัด ภาษาญี่ปุ่นออนไลน์</h3>
+                            <p> จัดเก็บทุกสถิติการทำแบบฝึกหัด เพื่อให้สามารถประเมินความก้าวหน้า ของการเรียนรู้ในภาษาญี่ปุ่น ของนักเรียน นักศึกษาทุกคน </p>
+                            <p>ทำให้สามารถเข้าใจว่าตัวเองยังต้องพัฒนาจุดไหนได้อย่างแม่นยำ ไวยากรณ์ คำศัพท์ คันจิ การสื่อสาร การอ่าน การฟัง เพื่อที่จะได้กลับไปเรียนรู้เพิ่มเติมแล้วมาทำการทดสอบใหม่ได้อีกครั้ง</p>
 
                         </div>
                     </div>
-                </div>
+                    <div class="col-lg-6">
+                        <div class="service-img">
+                            <img src="{{ url('img/1_qCxU5EqslHAWpPcweVV41Q.png')}}" alt="" class="img-fluid">
+                        </div>
+                    </div>
             </div>
         </div>
+    </div>
         <div class="about-two section-padding">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-6">
                         <div class="service-content my-5">
-                            <h3>Working at Tradix</h3>
-                            <p>Digital currencies are changing how we use and think about money. Tradix, the most
-                                trusted
-                                company in the space, is looking for you to join our rapidly growing team.</p>
-                            <a href="#" class="btn btn-primary">Read more</a>
+                            <h3>แบบฝึกหัดจากครูพี่โฮมเอง</h3>
+                            <p>ทุกแบบทดสอบที่อยู่ในระบบ ครูพี่โฮมได้มีความตั้งใจทำมาให้กับน้องอย่างตั้งใจ เพื่อให้ได้รับความรู้ที่เข้าใจได้ง่าย ไม่เบื่อ อีกทั้งยังมีความหลากหลายให้เลือกทำฟรี!</p>
+                            <p>คอร์สเรียนภาษาญี่ปุ่นออนไลน์ กับครูพี่โฮม คนเดียวที่ได้ PAT ญี่ปุ่น 300 คะแนนเต็ม เกียรตินิยมอันดับ 1 (เหรียญทอง) อักษรศาสตร์ จุฬาฯ สื่อชั้นนำยอมรับ ประสบการณ์สอนกว่า 18 ปี</p>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="service-img">
-                            <img src="{{ url('assets/images/about/1.jpg')}}" alt="" class="img-fluid">
+                            <img src="{{ url('img/kru_pee_home_2020.jpg')}}" alt="" class="img-fluid">
                         </div>
                     </div>
                 </div>

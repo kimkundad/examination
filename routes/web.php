@@ -21,6 +21,8 @@ Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Route::get('/home', 'HomeController@index')->name('index');
 Route::get('/', 'HomeController@index')->name('index');
 
+Route::post('/api/add_my_contact', 'ApiController@add_my_contact')->name('add_my_contact');
+
 Route::get('/answer/{id}', 'HomeController@answer')->name('answer');
 
 Route::get('/start_exam/{id}', 'HomeController@start_exam')->name('start_exam');

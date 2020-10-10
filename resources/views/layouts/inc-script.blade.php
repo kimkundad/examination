@@ -17,8 +17,9 @@
 
 
     <script src="{{ url('assets/js/global.js') }}"></script>
-
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@2.1.6/dist/loadingoverlay.min.js"></script>
+
 
 
     <!-- Chart sparkline plugin files -->
