@@ -39,7 +39,35 @@
                             <p class="mb-1">จำนวน {{ $ex->ex_total }} ข้อ</p>
                             <p class="mb-1">เวลา {{ $ex->ex_time }}</p>
                             <br><br>
-                            <a href="{{ url('doExam/'.$ex->ids) }}" class="btn btn-success">เริ่มทำแบบทดสอบ</a>
+                            
+                            
+                            @if($ex->level == 0)
+                            <div>
+                            <p class="mb-1">เนื้อหาส่วนนี้นักเรียนสามารถเข้ามาทำข้อสอบได้ฟรี ไม่มีค่าใช้จ่าย</p>
+                            <h4 class="text-success">ข้อสอบฟรี</h4>
+                            </div>
+                            <a href="{{ url('check_doExam/'.$ex->ids) }}" class="btn btn-success">เริ่มทำข้อสอบ</a>
+                            @else
+
+                                @if(Auth::guest())
+                                <div>
+                                <p class="mb-1"><b>กดสั่งซื้อข้อสอบ :</b>  {{ $ex->ex_name }} </p>
+                                <h4 class="text-success">ราคา {{ $ex->price }} บาท</h4>
+                                </div>
+                                <br>
+                                <td colspan="5" class="text-center">กรุณา <a href="{{ url('login') }}" class="btn btn-success">Login</a> เพื่อกดซื้อข้อสอบ</td>
+
+                                @else
+                                <div>
+                                <p class="mb-1"><b>กดสั่งซื้อข้อสอบ :</b>  {{ $ex->ex_name }} </p>
+                                <h4 class="text-success">ราคา {{ $ex->price }} บาท</h4>
+                                </div>
+                                <br>
+                                <a href="{{ url('buy_doExam/'.$ex->ids) }}" class="btn btn-primary">กดซื้อข้อสอบ</a>
+                                @endif
+
+                            @endif
+                            
                         </div>
                     </div>
                 </div>
@@ -51,7 +79,7 @@
                 <div class="row justify-content-center">
                     <div class="col-xl-8">
                         <div class="section-title text-center">
-                            <h2>ประวัติการทำแบบทดสอบ</h2>
+                            <h2>ประวัติการทำข้อสอบ</h2>
                         </div>
                     </div>
                 </div>
@@ -66,14 +94,14 @@
                                         <tr>
                                             <th>#</th>
                                             <th>การทดสอบ</th>
-                                            <th>วันที่ทำแบบทดสอบ</th>
+                                            <th>วันที่ทำข้อสอบ</th>
                                             <th>ผลการทดสอบ</th>
                                             <th>เวลาที่ใช้</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td colspan="5" class="text-center">กรุณา <a href="{{ url('login') }}" class="btn btn-success">Login</a> เพื่อบันทึกข้อมูลการทำแบบทดสอบ</td>
+                                            <td colspan="5" class="text-center">กรุณา <a href="{{ url('login') }}" class="btn btn-success">Login</a> เพื่อบันทึกข้อมูลการทำข้อสอบ</td>
                                         
                                         </tr>
                                         
@@ -96,7 +124,7 @@
                                         <tr>
                                             <th>#</th>
                                             <th>การทดสอบ</th>
-                                            <th>วันที่ทำแบบทดสอบ</th>
+                                            <th>วันที่ทำข้อสอบ</th>
                                             <th>ผลการทดสอบ</th>
                                             <th>เวลาที่ใช้</th>
                                         </tr>

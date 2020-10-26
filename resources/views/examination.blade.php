@@ -78,10 +78,10 @@
                                 <table class="table mb-0 table-responsive-sm table-striped">
                                     <thead>
                                         <tr>
-                                            <th>รหัส</th>
+                                            <th class="m_h">รหัส</th>
                                             <th>ข้อสอบ</th>
                                             <th>จำนวนข้อ</th>
-                                            <th>ระดับ</th>
+                                            <th class="m_h">ระดับ</th>
                                             <th>ผู้เข้าชม</th>
                                             <th></th>
                                         </tr>
@@ -91,14 +91,14 @@
                                         @if(isset($j->my_ex))
                                         @foreach($j->my_ex as $u)
                                         <tr>
-                                            <td>{{ $u->ex_code }}</td>
+                                            <td class="m_h">{{ $u->ex_code }}</td>
                                             <td class="coin_icon">
                                                 <span>{{ $u->ex_name }}</span>
                                             </td>
                                             <td>
                                             {{ $u->option }}
                                             </td>
-                                            <td>
+                                            <td class="m_h">
                                                 <span class="text-danger">{{$j->cat_name}}</span>
                                             </td>
                                             <td>{{ $u->ex_view }} </td>

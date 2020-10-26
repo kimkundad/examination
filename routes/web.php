@@ -30,7 +30,7 @@ Route::get('/start_exam/{id}', 'HomeController@start_exam')->name('start_exam');
 Route::post('/search_category', 'HomeController@search_category')->name('search_category');
 Route::get('/category/{id}', 'HomeController@category')->name('category');
 
-Route::get('/doExam/{id}', 'HomeController@doExam')->name('doExam');
+
 
 Route::get('/reportExam/{id}', 'HomeController@reportExam')->name('reportExam');
 
@@ -45,6 +45,8 @@ Route::get('/examination', 'HomeController@examinations')->name('examinations');
 Route::get('/terms', 'HomeController@terms')->name('terms');
 Route::get('/privacy_policy', 'HomeController@privacy_policy')->name('privacy_policy');
 
+Route::get('/check_doExam/{id}', 'ApiController@check_doExam')->name('check_doExam');
+
 
 Route::group(['middleware' => ['UserRole:manager|employee|customer']], function() {
 
@@ -52,6 +54,13 @@ Route::group(['middleware' => ['UserRole:manager|employee|customer']], function(
   Route::get('/accounts', 'ProfileController@accounts')->name('accounts');
   Route::post('api/add_profile','ProfileController@add_profile');
 
+  Route::get('/doExam/{id}', 'HomeController@doExam')->name('doExam');
+  Route::get('/buy_doExam/{id}', 'ApiController@buy_doExam')->name('buy_doExam');
+
+  Route::get('/get_myorder/{id}', 'DoExamController@get_myorder')->name('get_myorder');
+  
+  Route::post('/api/add_my_order', 'ApiController@add_my_order')->name('add_my_order');
+  
   });
 
 Route::group(['middleware' => ['UserRole:manager|employee']], function() {

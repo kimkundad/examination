@@ -40,5 +40,9 @@
         swal("Success!", "ระบบทำการแก้ไขข้อมูลให้แล้ว.", "success");
         @endif
 
+        @if ($message = Session::get('please_login'))
+        swal("กรุณาทำการ Login เข้าสู่ระบบก่อนทำข้อสอบ");
+        @endif
+
     </script>
     
