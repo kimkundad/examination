@@ -147,7 +147,7 @@ class HomeController extends Controller
   
   
   
-            $message = $request['name_c']." ได้ทำการแจ้งชำระเงินมาที่ Order ID : ".$request['order_id_c']." เบอร์ : ".$request['phone_c'];
+            $message = $request['name_c']."jlpt.online ได้ทำการแจ้งชำระเงินมาที่ Order ID : ".$request['order_id_c']." เบอร์ : ".$request['phone_c'];
   
   
                 $image_thumbnail_url = url('assets/img/slip/'.$input['imagename_small']);  // max size 240x240px JPEG
