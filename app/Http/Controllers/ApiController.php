@@ -93,7 +93,7 @@ class ApiController extends Controller
               $data_toview['data'] = $get_data;
               $data_toview['datatime'] = date("d-m-Y H:i:s");
 
-              $email_sender   = 'kim.kundad@gmail.com';
+              $email_sender   = 'learnsbuy@gmail.com';
               $email_pass     = env('email_pass');
 
               $email_to       =  $get_data->email;
