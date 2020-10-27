@@ -149,8 +149,8 @@ class HomeController extends Controller
             $message = $request['name_c']." ได้ทำการแจ้งชำระเงินมาที่ Order ID : ".$request['order_id_c']." เบอร์ : ".$request['phone_c'];
   
   
-                $image_thumbnail_url = url('assets/home/img/slip/'.$input['imagename_small']);  // max size 240x240px JPEG
-                $image_fullsize_url = url('assets/home/img/slip/'.$input['imagename']); //max size 1024x1024px JPEG
+                $image_thumbnail_url = url('assets/img/slip/'.$input['imagename_small']);  // max size 240x240px JPEG
+                $image_fullsize_url = url('assets/img/slip/'.$input['imagename']); //max size 1024x1024px JPEG
                 $imageFile = 'copy/240.jpg';
                 $sticker_package_id = '';  // Package ID sticker
                 $sticker_id = '';    // ID sticker
