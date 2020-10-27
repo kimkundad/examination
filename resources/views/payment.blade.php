@@ -100,6 +100,7 @@
                         @endif
                         
                         <form  action="{{url('post_confirm_payment/')}}" method="post" enctype="multipart/form-data">
+                        {{ csrf_field() }}
                             <div class="row">
                             <div class="col-12 col-md-6">
                                     <div class="form-group mb-5">
