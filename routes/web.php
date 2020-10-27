@@ -66,6 +66,8 @@ Route::group(['middleware' => ['UserRole:manager|employee|customer']], function(
 Route::group(['middleware' => ['UserRole:manager|employee']], function() {
 
   Route::get('admin/dashboard', 'DashboardController@index')->name('index');
+  Route::get('admin/del_myorder', 'ExampleController@del_myorder')->name('del_myorder');
+
   Route::resource('admin/users', 'UsersController');
   Route::resource('admin/category', 'CategoryController');
   Route::get('del/cat_id/{id}', 'CategoryController@del_cat')->name('home');

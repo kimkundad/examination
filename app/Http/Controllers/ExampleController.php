@@ -271,6 +271,13 @@ class ExampleController extends Controller
 
     }
 
+    public function del_myorder(){
+        $objs = DB::table('myorders')
+            ->where('id', '!=', 0)
+            ->delete();
+            return redirect(url('admin/example/'))->with('del_success','คุณทำการลบอสังหา สำเร็จ');
+    }
+
     public function del_example($id){
 
         $objs = DB::table('exercises')
