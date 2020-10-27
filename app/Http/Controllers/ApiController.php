@@ -54,7 +54,7 @@ class ApiController extends Controller
 
     public function add_my_order(Request $request){
 
-      dd(env('email_pass'));
+      
 
             $check_count = DB::table('myorders')
             ->where('ex_id', $request['ex_id'])
@@ -93,8 +93,8 @@ class ApiController extends Controller
               $data_toview['data'] = $get_data;
               $data_toview['datatime'] = date("d-m-Y H:i:s");
 
-              $email_sender   = 'kim.kundad@gmail.com';
-              $email_pass     = env('email_pass');
+              $email_sender   = 'learnsbuy@gmail.com';
+              $email_pass     = 'xaalfujrvocgtijo';
 
               $email_to       =  $get_data->email;
               //echo $admins[$idx]['email'];
