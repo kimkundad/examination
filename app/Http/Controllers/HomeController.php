@@ -87,7 +87,7 @@ class HomeController extends Controller
 
   if($response["success"] == false) {
 
-    return redirect(url('payment/'))->with('error_confirm','คุณทำการเพิ่มอสังหา สำเร็จ');
+    return redirect(url('payment/'.$request['order_id_c']))->with('error_confirm','คุณทำการเพิ่มอสังหา สำเร็จ');
   }else{
 
     $image = $request->file('image');
@@ -192,12 +192,11 @@ class HomeController extends Controller
             return redirect(url('confirm_payment_success/'.$get_code->order_id))->with('add_success','คุณทำการเพิ่มอสังหา สำเร็จ');
   
          }else{
-            return redirect(url('payment/'))->with('error_confirm','คุณทำการเพิ่มอสังหา สำเร็จ');
+            return redirect(url('payment/'.$request['order_id_c']))->with('error_confirm','คุณทำการเพิ่มอสังหา สำเร็จ');
          }
 
   }
 
-        
   
   
   
