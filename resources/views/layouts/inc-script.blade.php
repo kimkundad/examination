@@ -30,11 +30,24 @@
 
 
     <script src="{{ url('assets/vendor/owl-carousel/js/owl.carousel.min.js') }}"></script>
+    <script src="{{ url('assets/vendor/waves/waves.min.js') }}"></script>
     <script src="{{ url('assets/js/plugins/owl-carousel-init.js') }}"></script>
+    <script src="{{ url('assets/vendor/jquery-ui/jquery-ui.min.js') }}"></script>
+    
 
-    <script src="{{ url('assets/js/scripts.js') }}"></script>
+    
+    
+        <script src="{{ url('assets/js/scripts.js') }}"></script>
 
     <script>
+
+(function ($) {
+    'use strict'
+    $("#datepicker").datepicker({
+        dateFormat: "dd-mm-yy",
+        duration: "fast"
+    });
+})(jQuery);
 
         @if ($message = Session::get('edit_success'))
         swal("Success!", "ระบบทำการแก้ไขข้อมูลให้แล้ว.", "success");
@@ -43,6 +56,9 @@
         @if ($message = Session::get('please_login'))
         swal("กรุณาทำการ Login เข้าสู่ระบบก่อนทำข้อสอบ");
         @endif
+
+
+        
 
     </script>
     

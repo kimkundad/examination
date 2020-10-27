@@ -30,9 +30,12 @@ Route::get('/start_exam/{id}', 'HomeController@start_exam')->name('start_exam');
 Route::post('/search_category', 'HomeController@search_category')->name('search_category');
 Route::get('/category/{id}', 'HomeController@category')->name('category');
 
-
-
+Route::get('/payment/{id}', 'HomeController@payment')->name('payment');
+Route::get('/payment', 'HomeController@payment2')->name('payment2');
+Route::post('post_confirm_payment', 'HomeController@post_confirm_payment');
 Route::get('/reportExam/{id}', 'HomeController@reportExam')->name('reportExam');
+
+Route::get('confirm_payment_success/{id}', 'HomeController@confirm_payment_success');
 
 Route::get('/about_us', 'HomeController@about')->name('about');
 
