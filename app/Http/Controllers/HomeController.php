@@ -8,6 +8,7 @@ use App\category;
 use App\exercise;
 use App\answer;
 use App\answerh;
+use App\bank_payment;
 use Illuminate\Support\Facades\DB;
 use Intervention\Image\ImageManagerStatic as Image;
 
