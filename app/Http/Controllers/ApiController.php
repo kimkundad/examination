@@ -83,7 +83,7 @@ class ApiController extends Controller
             ->first();
 
 
-
+              dd(env('email_pass'));
 
 
               // send email
