@@ -49,6 +49,23 @@
                     </div>
 
                     <div class="form-group">
+                      <label for="exampleInputUsername1">ราคา <span class="text-danger">*</span></label>
+                      <input type="text" class="form-control" placeholder="0" name="price" value="{{ $objs->price }}">
+                    </div>
+
+                    <div class="form-group">
+                      <label for="exampleInputUsername1">ประเภทข้อสอบ <span class="text-danger">*</span></label>
+                      <select class="form-control" name="level" >
+                        <option value="0" @if( $objs->level == 0)
+														selected='selected'
+														@endif> ฟรี </option>
+                        <option value="1" @if( $objs->level == 1)
+														selected='selected'
+														@endif> เสียเงิน </option>
+                    </select>
+                    </div>
+
+                    <div class="form-group">
                       <label for="exampleInputUsername1">เลือก หมวดหมู่ <span class="text-danger">*</span></label>
                       <select class="form-control" name="cat_id" >
                         <option value=""> -- เลือก หมวดหมู่ -- </option>

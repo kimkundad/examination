@@ -99,6 +99,8 @@ class ExampleController extends Controller
       $package->ex_total = $request['ex_total'];
       $package->ex_time = $request['ex_time'];
       $package->ex_code = $request['ex_code'];
+      $package->price = $request['price'];
+      $package->level = $request['level'];
       $package->save();
 
       return redirect(url('admin/example/'.$package->id.'/show'))->with('add_success','เพิ่ม เสร็จเรียบร้อยแล้ว');
@@ -237,6 +239,8 @@ class ExampleController extends Controller
             $package->ex_total = $request['ex_total'];
             $package->ex_time = $request['ex_time'];
             $package->ex_code = $request['ex_code'];
+            $package->price = $request['price'];
+            $package->level = $request['level'];
             $package->save();
 
         }else{
@@ -256,6 +260,8 @@ class ExampleController extends Controller
             $package->ex_total = $request['ex_total'];
             $package->ex_time = $request['ex_time'];
             $package->ex_code = $request['ex_code'];
+            $package->price = $request['price'];
+            $package->level = $request['level'];
             $package->save();
 
         }

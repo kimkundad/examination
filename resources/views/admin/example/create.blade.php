@@ -49,6 +49,19 @@
                     </div>
 
                     <div class="form-group">
+                      <label for="exampleInputUsername1">ราคา <span class="text-danger">*</span></label>
+                      <input type="text" class="form-control" placeholder="0" name="price" value="{{ old('price') }}">
+                    </div>
+
+                    <div class="form-group">
+                      <label for="exampleInputUsername1">ประเภทข้อสอบ <span class="text-danger">*</span></label>
+                      <select class="form-control" name="level" >
+                        <option value="0"> ฟรี </option>
+                        <option value="1"> เสียเงิน </option>
+                    </select>
+                    </div>
+
+                    <div class="form-group">
                       <label for="exampleInputUsername1">เลือก หมวดหมู่ <span class="text-danger">*</span></label>
                       <select class="form-control" name="cat_id" >
                         <option value=""> -- เลือก หมวดหมู่ -- </option>
