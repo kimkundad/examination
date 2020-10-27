@@ -118,18 +118,18 @@ class HomeController extends Controller
   
            $input['imagename'] = time().'.'.$image->getClientOriginalExtension();
   
-           $destinationPath = asset('assets/image/product/');
+      
            $img = Image::make($image->getRealPath());
            $img->resize(800, 800, function ($constraint) {
            $constraint->aspectRatio();
-         })->save('assets/home/img/slip/'.$input['imagename']);
+         })->save('assets/img/slip/'.$input['imagename']);
   
          $input['imagename_small'] = time().'_small.'.$image->getClientOriginalExtension();
   
           $img = Image::make($image->getRealPath());
           $img->resize(240, 240, function ($constraint) {
           $constraint->aspectRatio();
-        })->save('assets/home/img/slip/'.$input['imagename_small']);
+        })->save('assets/img/slip/'.$input['imagename_small']);
   
            $package = new bank_payment();
             $package->order_id_c = $request['order_id_c'];
