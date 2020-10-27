@@ -71,7 +71,25 @@ class HomeController extends Controller
 
     public function post_confirm_payment(Request $request){
 
-        $image = $request->file('image');
+        $secret="6LdQnlkUAAAAADW2xY5YauDvYTlGfrzlg-X1la3k";
+  //  $response = $request['captcha'];
+
+    $captcha = "";
+    if (isset($request["g-recaptcha-response"]))
+      $captcha = $request["g-recaptcha-response"];
+
+  //  $verify=file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secret&response=$response");
+    $response = json_decode(file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$secret."&response=".$captcha."&remoteip=".$_SERVER["REMOTE_ADDR"]), true);
+    //$captcha_success=json_decode($verify);
+
+  //  dd($captcha_success);
+
+  if($response["success"] == false) {
+
+    return redirect(url('confirm_payment/'))->with('error_confirm','คุณทำการเพิ่มอสังหา สำเร็จ');
+  }else{
+
+    $image = $request->file('image');
         $this->validate($request, [
              'image' => 'required|max:8048',
              'name_c' => 'required',
@@ -175,6 +193,10 @@ class HomeController extends Controller
          }else{
             return redirect(url('confirm_payment/'))->with('error_confirm','คุณทำการเพิ่มอสังหา สำเร็จ');
          }
+
+  }
+
+        
   
   
   
