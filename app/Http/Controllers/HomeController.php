@@ -71,7 +71,7 @@ class HomeController extends Controller
 
     public function post_confirm_payment(Request $request){
 
-        $secret="6LdQnlkUAAAAADW2xY5YauDvYTlGfrzlg-X1la3k";
+    $secret="6LdQnlkUAAAAADW2xY5YauDvYTlGfrzlg-X1la3k";
   //  $response = $request['captcha'];
 
     $captcha = "";
@@ -86,7 +86,7 @@ class HomeController extends Controller
 
   if($response["success"] == false) {
 
-    return redirect(url('confirm_payment/'))->with('error_confirm','คุณทำการเพิ่มอสังหา สำเร็จ');
+    return redirect(url('payment/'))->with('error_confirm','คุณทำการเพิ่มอสังหา สำเร็จ');
   }else{
 
     $image = $request->file('image');
@@ -191,7 +191,7 @@ class HomeController extends Controller
             return redirect(url('confirm_payment_success/'.$get_code->order_id))->with('add_success','คุณทำการเพิ่มอสังหา สำเร็จ');
   
          }else{
-            return redirect(url('confirm_payment/'))->with('error_confirm','คุณทำการเพิ่มอสังหา สำเร็จ');
+            return redirect(url('payment/'))->with('error_confirm','คุณทำการเพิ่มอสังหา สำเร็จ');
          }
 
   }
