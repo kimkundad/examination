@@ -9,6 +9,7 @@ use App\exercise;
 use App\answer;
 use App\answerh;
 use Illuminate\Support\Facades\DB;
+use Intervention\Image\ImageManagerStatic as Image;
 
 class HomeController extends Controller
 {
