@@ -54,7 +54,7 @@ class ApiController extends Controller
 
     public function add_my_order(Request $request){
 
-            
+      dd(env('email_pass'));
 
             $check_count = DB::table('myorders')
             ->where('ex_id', $request['ex_id'])
@@ -83,7 +83,7 @@ class ApiController extends Controller
             ->first();
 
 
-              dd(env('email_pass'));
+              
 
 
               // send email
