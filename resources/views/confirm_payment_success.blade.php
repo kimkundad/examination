@@ -37,11 +37,11 @@
                                                 </tr>
                                                 <tr>
                                                     <td>วันที่</td>
-                                                    <td>{{$objs->day_tran}} / {{$objs->time_tran}}</td>
+                                                    <td>{{$ex->day_tran}} / {{$ex->time_tran}}</td>
                                                 </tr>
                                                 <tr>
                                                     <td>ชื่อผู้ส่งเรื่อง</td>
-                                                    <td>{{$objs->name_c}}</td>
+                                                    <td>{{$ex->name_c}}</td>
                                                 </tr>
                                                 <tr>
                                                     <td>เลือกชำระเงิน</td>
@@ -49,16 +49,16 @@
                                                 </tr>
                                                 <tr>
                                                     <td>อีเมล</td>
-                                                    <td>{{$objs->email_c}}</td>
+                                                    <td>{{$ex->email_c}}</td>
                                                 </tr>
                                                 <tr>
                                                     <td>เบอร์ติดต่อ</td>
-                                                    <td>{{$objs->phone_c}}</td>
+                                                    <td>{{$ex->phone_c}}</td>
                                                 </tr>
                                                 
                                                 <tr>
                                                     <td> ยอดที่ต้องชำระ</td>
-                                                    <td>฿{{$objs->money_c}}</td>
+                                                    <td>฿{{$ex->money_c}}</td>
                                                 </tr>
                                             </tbody>
                                         </table>
