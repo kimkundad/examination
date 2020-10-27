@@ -14,7 +14,7 @@
 
           <div class="row">
             <div class="col-md-12">
-            <a href="{{ url('admin/del_myorder') }}" class="btn btn-success btn-fw" style="float:right"><i class="icon-plus"></i>เพิ่ม แบบฝึกหัด</a>
+            <a href="{{ url('admin/del_myorder') }}" class="btn btn-success btn-fw" style="float:right"><i class="icon-plus"></i>ลบข้อมูลสั่งซื้อ</a>
               <a href="{{ url('admin/example/create') }}" class="btn btn-success btn-fw" style="float:right"><i class="icon-plus"></i>เพิ่ม แบบฝึกหัด</a>
               <br /><br />
             </div>
