@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-xl-4">
                 <div class="bottom-logo">
-                    <img class="pb-3" src="{{ url('img/logo/800px-Google_2015_logo.svg.png') }}" alt="" style="height:60px;">
+                    <img class="pb-3" src="{{ url('img/logo/JLPTONLINE_Logo_2020_02_v1.png') }}" alt="" style="height:60px;">
 
                     <p>โรงเรียนสอนภาษาญี่ปุ่น ออนไลน์ คอร์สเรียนภาษาญี่ปุ่น ออนไลน์ ติว PAT ญี่ปุ่น ติว JLPT N5 N4 N3 N2 N1 กับ ครูพี่โฮม ZA-SHI เรียนภาษาญี่ปุ่นออนไลน์ ผ่านแอพทันสมัย</p>
                 </div>

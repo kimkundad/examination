@@ -54,6 +54,10 @@ Route::get('/check_doExam/{id}', 'ApiController@check_doExam')->name('check_doEx
 Route::group(['middleware' => ['UserRole:manager|employee|customer']], function() {
 
   Route::get('/history', 'ProfileController@history')->name('history');
+  Route::get('/buy_history', 'ProfileController@buy_history')->name('buy_history');
+
+  Route::get('/my_examination', 'ProfileController@my_examination')->name('my_examination');
+  
   Route::get('/accounts', 'ProfileController@accounts')->name('accounts');
   Route::post('api/add_profile','ProfileController@add_profile');
 

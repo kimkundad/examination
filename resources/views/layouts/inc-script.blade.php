@@ -41,6 +41,22 @@
 
     <script>
 
+$('.navbar-toggler').on('click', function(){
+    var div = document.getElementById('icon_pro');
+    if (div.style.display !== 'none') {
+        div.style.display = 'none';
+    }
+    else {
+        setTimeout(function(){
+            div.style.display = 'block';
+            }, 500);
+        
+    }
+  
+});
+
+
+
 (function ($) {
     'use strict'
     $("#datepicker").datepicker({

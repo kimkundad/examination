@@ -27,9 +27,61 @@ class ProfileController extends Controller
         )
         ->leftjoin('exercises', 'exercises.id',  'answerhs.examples_id')
         ->where('answerhs.user_id', Auth::user()->id)
+        ->orderBy('answerhs.created_at', 'desc')
         ->paginate(15);
+
         $data['user'] = $user;
         return view('history', $data);
+    }
+
+
+    public function my_examination(){
+
+        $user = DB::table('myorders')
+        ->select(
+        'myorders.*',
+        'myorders.id as ids',
+        'myorders.created_at as created_ats',
+        'exercises.*',
+        'categories.*'
+        )
+        ->leftjoin('exercises', 'exercises.id',  'myorders.ex_id')
+        ->leftjoin('categories', 'categories.id',  'exercises.cat_id')
+        ->where('myorders.user_id', Auth::user()->id)
+        ->where('myorders.status1', 2)
+        ->orderBy('myorders.created_at', 'desc')
+        ->paginate(15);
+
+        foreach ($user as $u) {
+            $options = DB::table('questions')->where('part_id',$u->ids)->count();
+            $u->option = $options;
+        }
+
+        //dd($user);
+
+        $data['user'] = $user;
+        return view('my_examination', $data);
+
+    }
+
+
+    public function buy_history(){
+
+        $user = DB::table('myorders')
+        ->select(
+        'myorders.*',
+        'myorders.id as ids',
+        'myorders.created_at as created_ats',
+        'exercises.*'
+        )
+        ->leftjoin('exercises', 'exercises.id',  'myorders.ex_id')
+        ->where('myorders.user_id', Auth::user()->id)
+        ->orderBy('myorders.created_at', 'desc')
+        ->paginate(15);
+        
+        $data['user'] = $user;
+        return view('buy_history', $data);
+
     }
 
     public function accounts(){

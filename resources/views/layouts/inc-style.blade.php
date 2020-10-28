@@ -10,6 +10,9 @@
     font-family: 'Prompt', sans-serif;
 
 }
+.header .navbar-brand img {
+    max-width: 200px;
+}
     .signin-btn .btn {
   color: #fff !important;
 }

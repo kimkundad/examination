@@ -4,7 +4,7 @@
                     <div class="col-xl-12">
                         <div class="navigation">
                             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                                <a class="navbar-brand" href="{{ url('/') }}"><img src="{{ url('img/logo/800px-Google_2015_logo.svg.png') }}" alt=""></a>
+                                <a class="navbar-brand" href="{{ url('/') }}"><img src="{{ url('img/logo/JLPTONLINE_Logo_2020_02_v1.png') }}" alt=""></a>
                                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                                     data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
                                     aria-expanded="false" aria-label="Toggle navigation">
@@ -41,7 +41,7 @@
                                 </div>
                                 @if (Auth::guest())
                                 @else
-                                <div class="profile_log dropdown">
+                                <div class="profile_log dropdown" id="icon_pro">
                                         <div class="user" data-toggle="dropdown">
                                             <span class="thumb"><i class="la la-user"></i></span>
                                             <span class="name">{{ mb_substr(Auth::user()->name, 0, 7, 'UTF-8') }}</span>
@@ -51,8 +51,14 @@
                                             <a href="{{ url('accounts') }}" class="dropdown-item">
                                                 <i class="la la-user"></i> ข้อมูลส่วนตัว
                                             </a>
+                                            <a href="{{ url('my_examination') }}" class="dropdown-item">
+                                                <i class="la la-cubes"></i> ข้อสอบของฉัน
+                                            </a>
                                             <a href="{{ url('history') }}" class="dropdown-item">
                                                 <i class="la la-book"></i> ประวัติข้อสอบ
+                                            </a>
+                                            <a href="{{ url('buy_history') }}" class="dropdown-item">
+                                                <i class="la la-shopping-cart"></i> ประวัติการสั่งซื้อ
                                             </a>
                                             
                                             <a href="{{ url('logout') }}" class="dropdown-item logout">
