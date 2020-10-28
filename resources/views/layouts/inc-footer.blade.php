@@ -25,6 +25,7 @@
                         <li><a href="{{ url('contact_us') }}">ติดต่อเรา</a></li>
                         <li><a href="{{ url('faq') }}">ตอบ - ถาม</a></li>
                         <li><a href="https://learnsbuy.com/news">บทความ</a></li>
+                        <li><a href="{{ url('payment') }}">แจ้งการชำระเงิน</a></li>
                     </ul>
                 </div>
             </div>
