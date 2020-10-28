@@ -25,6 +25,9 @@
                                       <li class="nav-item">
                                           <a class="nav-link" href="{{ url('/contact_us') }}" style="width:85px">ติดต่อเรา</a>
                                       </li>
+                                      <li class="nav-item">
+                                          <a class="nav-link" href="{{ url('/payment') }}" style="width:85px">แจ้งชำระเงิน</a>
+                                      </li>
                                       @if (Auth::guest())
                                       <li class="nav-item intro-btn">
                                           <a class="nav-link btn btn-outline-primary" href="{{ url('/login') }}" style="width:85px">เข้าสู่ระบบ</a>
