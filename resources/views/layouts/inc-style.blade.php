@@ -1,5 +1,5 @@
 <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ url('assets/images/favicon.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url('assets/images/favicon_v1.png') }}">
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="{{ url('assets/vendor/nice-select/css/nice-select.css') }}">
     <link rel="stylesheet" href="{{ url('assets/vendor/owl-carousel/css/owl.theme.default.css') }}">
