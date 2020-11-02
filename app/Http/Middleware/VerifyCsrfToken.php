@@ -20,7 +20,7 @@ class VerifyCsrfToken extends Middleware
      */
     protected $except = [
         //
-        'admin_order',
+        'admin_order*',
         'get_data_order/*',
         'api/add_my_order2*'
     ];
