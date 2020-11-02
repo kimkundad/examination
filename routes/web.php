@@ -23,10 +23,14 @@ Route::get('/', 'HomeController@index')->name('index');
 
 
 Route::get('/admin_order', 'DashboardController@admin_order')->name('admin_order');
+Route::get('/get_data_order/{id}', 'DashboardController@get_data_order')->name('get_data_order');
+
 
 Route::get('/admin/api_edit_order/{id}', 'DashboardController@edit_order')->name('edit_order');
 
 Route::post('/api/post_edit_order/{id}', 'DashboardController@post_edit_order')->name('post_edit_order');
+Route::post('/api/add_my_order2', 'DashboardController@add_my_order2')->name('add_my_order2');
+
 
 Route::post('/api/add_my_contact', 'ApiController@add_my_contact')->name('add_my_contact');
 

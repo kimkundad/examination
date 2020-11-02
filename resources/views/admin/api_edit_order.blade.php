@@ -83,34 +83,34 @@
 
                     <div class="form-group">
                       <label for="exampleInputUsername1">เบอร์ติดต่อ </label>
-                      <input type="text" class="form-control" name="name_c" value="{{ $get_code->name_c }}" readonly>
+                      <input type="text" class="form-control" name="phone_c" value="{{ $get_code->phone_c }}" readonly>
                     </div>
 
                     <div class="form-group">
                       <label for="exampleInputUsername1">อีเมล </label>
-                      <input type="text" class="form-control" name="name_c" value="{{ $get_code->name_c }}" readonly>
+                      <input type="text" class="form-control" name="email_c" value="{{ $get_code->email_c }}" readonly>
                     </div>
 
                     <div class="form-group">
                       <label for="exampleInputUsername1">จำนวนเงิน </label>
-                      <input type="text" class="form-control" name="name_c" value="{{ $get_code->name_c }}" readonly>
+                      <input type="text" class="form-control" name="money_c" value="{{ $get_code->money_c }}" readonly>
                     </div>
 
                     <div class="form-group">
                       <label for="exampleInputUsername1">ธนาคาร </label>
                       @if($get_code->bank == 1)
-                      <input type="text" class="form-control" name="name_c" value="ธนาคารไทยพาณิชย์ (ภาษาญี่ปุ่น) 227-204-4159 อ.พรหมเทพ ชัยกิตติวณิชย์" readonly>
+                      <input type="text" class="form-control" name="bank" value="ธนาคารไทยพาณิชย์ (ภาษาญี่ปุ่น) 227-204-4159 อ.พรหมเทพ ชัยกิตติวณิชย์" readonly>
                       @elseif($get_code->bank == 2)
-                      <input type="text" class="form-control" name="name_c" value="ธนาคารกสิกรไทย (ภาษาญี่ปุ่น) 026-226-1532 อ.พรหมเทพ ชัยกิตติวณิชย์" readonly>
+                      <input type="text" class="form-control" name="bank" value="ธนาคารกสิกรไทย (ภาษาญี่ปุ่น) 026-226-1532 อ.พรหมเทพ ชัยกิตติวณิชย์" readonly>
                       @else
-                      <input type="text" class="form-control" name="name_c" value="ธนาคารกรุงไทย (ภาษาญี่ปุ่น) 981-169-5903 อ.พรหมเทพ ชัยกิตติวณิชย์" readonly>
+                      <input type="text" class="form-control" name="bank" value="ธนาคารกรุงไทย (ภาษาญี่ปุ่น) 981-169-5903 อ.พรหมเทพ ชัยกิตติวณิชย์" readonly>
                       @endif
                       
                     </div>
 
                     <div class="form-group">
                       <label for="exampleInputUsername1">วัน-เวลา </label>
-                      <input type="text" class="form-control" name="name_c" value="{{ $get_code->day_tran }} / {{ $get_code->time_tran }}" readonly>
+                      <input type="text" class="form-control" name="day_tran" value="{{ $get_code->day_tran }} / {{ $get_code->time_tran }}" readonly>
                     </div>
 
                     <div class="form-group">
