@@ -64,6 +64,7 @@
                                     </div>
                                     <br>
                                     @if($check_count != null)
+
                                         @if($check_count->status1 == 0)
                                         <p class="mb-1 text-danger">นักเรียนได้ทำการสั่งซื้อข้อสอบนี้ไปแล้ว รอการแจ้งชำระเงิน</p>
                                         <a href="{{ url('payment/'.$check_count->order_id) }}" class="btn btn-danger">แจ้งการชำระเงิน</a>
@@ -73,6 +74,8 @@
                                         @else
                                         <a href="{{ url('check_doExam/'.$ex->ids) }}" class="btn btn-success">เริ่มทำข้อสอบ</a>
                                         @endif
+                                    @else
+                                    <td colspan="5" class="text-center"> <a href="{{ url('buy_doExam/'.$ex->ids) }}" class="btn btn-success">Login</a> กดซื้อข้อสอบ</td>
                                     @endif
 
                                 @endif
