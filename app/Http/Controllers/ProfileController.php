@@ -43,6 +43,7 @@ class ProfileController extends Controller
         'myorders.id as ids',
         'myorders.created_at as created_ats',
         'exercises.*',
+        'exercises.id as idx',
         'categories.*'
         )
         ->leftjoin('exercises', 'exercises.id',  'myorders.ex_id')

@@ -315,6 +315,16 @@ class HomeController extends Controller
             $user = null;
         }else{
 
+            $check_count = DB::table('myorders')
+            ->where('ex_id', $id)
+            ->where('user_id', Auth::user()->id)
+            ->first();
+
+            $data['check_count'] = $check_count;
+
+           // dd($check_count);
+
+
         $user = DB::table('answerhs')
         ->select(
         'answerhs.*',

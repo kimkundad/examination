@@ -73,6 +73,12 @@ $('.navbar-toggler').on('click', function(){
         swal("กรุณาทำการ Login เข้าสู่ระบบก่อนทำข้อสอบ");
         @endif
 
+        @if ($message = Session::get('please_buy'))
+        swal("ยังไม่ได้ทำการสั่งซื้อข้อสอบ");
+        @endif
+
+        
+
 
         
 

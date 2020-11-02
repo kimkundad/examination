@@ -58,7 +58,7 @@
                                                 <span class="text-danger">{{ $u->cat_name }}</span>
                                             </td>
                                             <td>{{ $u->ex_view }} </td>
-                                            <td><a href="{{ url('/start_exam/'.$u->ids) }}" class="btn btn-outline-success">เริ่มทำข้อสอบ</a></td>
+                                            <td><a href="{{ url('/start_exam/'.$u->idx) }}" class="btn btn-outline-success">เริ่มทำข้อสอบ</a></td>
                                         </tr>
                                         @endforeach
                                         @endif

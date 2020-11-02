@@ -27,6 +27,26 @@ class ApiController extends Controller
         if($ex->level == 0){
           return redirect(url('doExam/'.$id));
         }else{
+
+          $check_count = DB::table('myorders')
+            ->where('ex_id', $id)
+            ->where('user_id', Auth::user()->id)
+            ->first();
+
+            if($check_count != null){
+
+              if($check_count->status1 == 0){
+                return redirect(url('start_exam/'.$id))->with('please_buy','ยังไม่ได้ทำการสั่งซื้อข้อสอบ');
+              }elseif($check_count->status1 == 1){
+                return redirect(url('start_exam/'.$id))->with('please_buy','ยังไม่ได้ทำการสั่งซื้อข้อสอบ');
+              }else{
+                return redirect(url('doExam/'.$id));
+              }
+
+            }else{
+              return redirect(url('start_exam/'.$id))->with('please_buy','ยังไม่ได้ทำการสั่งซื้อข้อสอบ');
+            }
+
           return redirect(url('start_exam/'.$id))->with('please_login','กรุณาทำการ Login เข้าสู่ระบบก่อนทำข้อสอบ');
         }
 
@@ -58,6 +78,7 @@ class ApiController extends Controller
 
             $check_count = DB::table('myorders')
             ->where('ex_id', $request['ex_id'])
+            ->where('user_id', Auth::user()->id)
             ->count();
 
             $obj = DB::table('users')

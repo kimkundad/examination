@@ -58,12 +58,23 @@
                                 <td colspan="5" class="text-center">กรุณา <a href="{{ url('login') }}" class="btn btn-success">Login</a> เพื่อกดซื้อข้อสอบ</td>
 
                                 @else
-                                <div>
-                                <p class="mb-1"><b>กดสั่งซื้อข้อสอบ :</b>  {{ $ex->ex_name }} </p>
-                                <h4 class="text-success">ราคา {{ $ex->price }} บาท</h4>
-                                </div>
-                                <br>
-                                <a href="{{ url('buy_doExam/'.$ex->ids) }}" class="btn btn-primary">กดซื้อข้อสอบ</a>
+                                    <div>
+                                    <p class="mb-1"><b>กดสั่งซื้อข้อสอบ :</b>  {{ $ex->ex_name }} </p>
+                                    <h4 class="text-success">ราคา {{ $ex->price }} บาท</h4>
+                                    </div>
+                                    <br>
+                                    @if($check_count != null)
+                                        @if($check_count->status1 == 0)
+                                        <p class="mb-1 text-danger">นักเรียนได้ทำการสั่งซื้อข้อสอบนี้ไปแล้ว รอการแจ้งชำระเงิน</p>
+                                        <a href="{{ url('payment/'.$check_count->order_id) }}" class="btn btn-danger">แจ้งการชำระเงิน</a>
+                                        @elseif($check_count->status1 == 1)
+                                        <p class="mb-1 text-warning">นักเรียนได้ทำการแจ้งชำระเงินไปแล้ว รอการตรวจสอบ</p>
+                                        <a href="#" class="btn btn-warning">รอการตรวจสอบ</a>
+                                        @else
+                                        <a href="{{ url('check_doExam/'.$ex->ids) }}" class="btn btn-success">เริ่มทำข้อสอบ</a>
+                                        @endif
+                                    @endif
+
                                 @endif
 
                             @endif
