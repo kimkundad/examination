@@ -75,7 +75,7 @@
                                         <a href="{{ url('check_doExam/'.$ex->ids) }}" class="btn btn-success">เริ่มทำข้อสอบ</a>
                                         @endif
                                     @else
-                                    <td colspan="5" class="text-center"> <a href="{{ url('buy_doExam/'.$ex->ids) }}" class="btn btn-success">Login</a> กดซื้อข้อสอบ</td>
+                                    <td colspan="5" class="text-center"> <a href="{{ url('buy_doExam/'.$ex->ids) }}" class="btn btn-success">กดซื้อข้อสอบ</a></td>
                                     @endif
 
                                 @endif
